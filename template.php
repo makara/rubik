@@ -471,7 +471,7 @@ function rubik_admin_drilldown_menu_item_link($link) {
  * Override of theme('textfield').
  */
 function rubik_textfield($element) {
-  if ($element['#size'] >= 30) {
+  if ($element['#size'] >= 30 && empty($element['#field_prefix']) && empty($element['#field_suffix'])) {
     $element['#size'] = '';
     $element['#attributes']['class'] = isset($element['#attributes']['class']) ? "{$element['#attributes']['class']} fluid" : "fluid";
   }
@@ -523,6 +523,9 @@ function rubik_filter_form($form) {
     if (isset($form[$key]['#type']) && $form[$key]['#type'] === 'radio') {
       $select .= drupal_render($form[$key]);
     }
+  }
+  if (!$select && isset($form['format'])) {
+    $select = drupal_render($form['format']);
   }
   $help = theme('filter_tips_more_info');
   $output = "<div class='filter-options clear-block'>{$select}{$help}</div>";
