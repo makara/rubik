@@ -65,6 +65,7 @@ div.status {
 /**
  * Menus, lists =======================================================
  */
+.admin-block-description,
 .help-items ul li,
 .confirmation ul li,
 .item-list ul li,
@@ -76,6 +77,7 @@ div.status {
   border-bottom:1px solid #f4f4f4;
   }
 
+  .admin-block-description,
   .help-items ul li:last-child,
   .confirmation ul li:last-child,
   .item-list ul li:last-child,

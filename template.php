@@ -311,6 +311,15 @@ function rubik_preprocess_comment_wrapper(&$vars) {
 }
 
 /**
+ * Preprocessor for theme('admin_block').
+ */
+function rubik_preprocess_admin_block(&$vars) {
+  if (empty($vars['block']['content'])) {
+    $vars['block']['content'] = "<div class='admin-block-description description'>{$vars['block']['description']}</div>";
+  }
+}
+
+/**
  * Override of theme('breadcrumb').
  */
 function rubik_breadcrumb($vars) {
