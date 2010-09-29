@@ -255,7 +255,7 @@ div.pager {
   position:relative;
   margin:5px 5px 5px 0px;
   font-size:11px;
-  background:#59a url(images/buttons.png) 0px 50% no-repeat;
+  background:#59a url(images/buttons.png) -800px 50% no-repeat;
   border-radius:3px;
   -moz-border-radius:3px;
   -webkit-border-radius:3px;
@@ -286,7 +286,7 @@ ul.secondary-tabs li a {
 
   .secondary-tabs li:hover,
   .secondary-tabs li.active { background:transparent; }
-  .secondary-tabs a:hover { background:#389 url(images/buttons.png) 0px 50% no-repeat; }
+  .secondary-tabs a:hover { background:#389 url(images/buttons.png) -800px 50% no-repeat; }
 
   .secondary-tabs li:last-child a:hover {
     border-radius:0px 0px 3px 3px;
