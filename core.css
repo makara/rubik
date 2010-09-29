@@ -303,7 +303,7 @@ input.form-submit {
 
   input.form-submit:active {
     border-color:#666 #666 #555;
-    background:#666 url(images/buttons.png) -401px 50% repeat-x;
+    background:#666 url(images/buttons.png) -401px 50% no-repeat;
     color:#222;
     text-shadow:#999 0px 1px 0px;
     }

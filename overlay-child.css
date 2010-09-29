@@ -29,7 +29,11 @@ html.js body {
 
 #overlay-close,
 #overlay-close:hover {
-  background:url(images/bleeds.png) -60px -120px no-repeat;
+  -moz-border-radius:5px;
+  -webkit-border-radius:5px;
+  border-radius:5px;
+
+  background:#444 url(images/buttons.png) -4000px 50% no-repeat;
   display: block;
   position: absolute;
   height: 20px;
@@ -37,6 +41,8 @@ html.js body {
   margin: 5px;
   padding: 0px;
   }
+
+  #overlay-close:active { background:#333 url(images/buttons.png) -4400px 50% no-repeat; }
 
 #overlay-content {
   background:#fff;
@@ -73,3 +79,21 @@ html.js body {
  * Tabs on the overlay.
  */
 #overlay-tabs { display:none; }
+
+/**
+ * Shortcut integration.
+ */
+#overlay-titlebar .add-or-remove-shortcuts {
+  position:absolute;
+  top:5px;
+  right:25px;
+  padding:0px;
+  }
+
+#overlay-titlebar .add-or-remove-shortcuts a { background-color:#444; }
+
+#overlay-titlebar .add-or-remove-shortcuts a:active {
+  background-color:#333;
+  text-shadow:#555 0px 1px 0px;
+  }
+

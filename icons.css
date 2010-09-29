@@ -124,12 +124,14 @@
 .path-admin-config-media-image-toolkit span.icon { background-position:-210px -330px; }
 
 .path-admin-config-development- span.icon       { background-position:-120px -180px; }
-.path-admin-config-development-devel span.icon  { background-position:-30px -330px; }
 .path-admin-config-development-performance span.icon { background-position:0px -60px; }
 .path-admin-config-development-maintenance span.icon { background-position:-180px -90px; }
 .path-admin-config-development-logging span.icon{ background-position:-120px -60px; }
 
-/* Deprecated */
+/* Contrib, @TODO */
+.path-admin-config-development-devel span.icon  { background-position:-30px -330px; }
+
+/* Deprecated, @TODO */
 .path-admin-settings-wysiwyg span.icon,
 .path-admin-settings-fckeditor span.icon,
 .path-admin-settings-tinymce span.icon          { background-position:-150px -330px; }
