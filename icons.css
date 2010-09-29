@@ -127,6 +127,8 @@
 .path-admin-config-development-maintenance span.icon { background-position:-180px -90px; }
 .path-admin-config-development-logging span.icon{ background-position:-120px -60px; }
 
+.path-admin-config-workflow- span.icon          { background-position:-30px -210px; }
+
 /* Contrib, @TODO */
 .path-admin-config-development-devel span.icon  { background-position:-30px -330px; }
 
