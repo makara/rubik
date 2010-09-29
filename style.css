@@ -301,43 +301,6 @@ ul.secondary-tabs li a {
     }
 
 /**
- * Page layout ========================================================
- */
-.block { margin:5px; }
-
-/**
- * Footer =============================================================
- */
-#footer {
-  font-size:11px;
-  text-shadow:#fff 0px 1px 0px;
-  }
-
-#footer .footer-message {
-  padding:0px 10px;
-  float:left;
-  }
-
-#footer .feed-icons {
-  -moz-border-radius:3px;
-  -webkit-border-radius:3px;
-
-  /* Assume icons are 16x16 like Drupal core. */
-  line-height:16px;
-  padding:7px 5px;
-  background:#c4c4c4;
-  float:right;
-  }
-
-  #footer .feed-icons img { display:block; }
-
-  #footer .feed-icons label,
-  #footer .feed-icons a {
-    padding:0px 5px;
-    float:left;
-    }
-
-/**
  * Content ============================================================
  */
 .help-page,
@@ -420,7 +383,3 @@ div.node .column-side .column-wrapper {
   font-weight:normal;
   font-size:16px;
   }
-
-/**
- * Console & messages =================================================
- */
