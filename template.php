@@ -314,6 +314,11 @@ function rubik_preprocess_comment_wrapper(&$vars) {
  * Preprocessor for theme('admin_block').
  */
 function rubik_preprocess_admin_block(&$vars) {
+  // Add icon and classes to admin block titles.
+  $vars['block']['localized_options']['attributes']['class'] = _rubik_icon_classes($vars['block']['href']);
+  $vars['block']['localized_options']['html'] = TRUE;
+  $vars['block']['title'] = l("<span class='icon'></span>" . filter_xss_admin($vars['block']['link_title']), $vars['block']['href'], $vars['block']['localized_options']);
+
   if (empty($vars['block']['content'])) {
     $vars['block']['content'] = "<div class='admin-block-description description'>{$vars['block']['description']}</div>";
   }

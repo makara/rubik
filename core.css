@@ -87,6 +87,7 @@ div.status {
     padding-bottom:5px;
     }
 
+.admin-panel h3 span.icon,
 .admin-list li a span.icon {
   position:absolute;
   left:10px;
@@ -95,6 +96,7 @@ div.status {
 
   .admin-list-compact li a span.icon { top:5px; }
 
+.admin-panel h3,
 .node-type-list li,
 .admin-list li {
   position:relative;
@@ -104,12 +106,15 @@ div.status {
   border-bottom:1px solid #e8e8e8;
   }
 
+  .admin-panel h3 {
+    background:#f4f4f4;
+    line-height:30px;
+    }
+
   .admin-list-compact li { min-height:20px; }
 
   .node-type-list li:last-child,
   .admin-list li:last-child { border:0px; }
-
-  ul.node-type-list label { font-size:15px; }
 
 /**
  * Tables =============================================================
@@ -407,7 +412,6 @@ select.form-select {
 
 .item-list h3,
 .block .block-title,
-.admin-panel h3,
 .fieldset-title,
 .collapsible .fieldset-legend a {
   display:block;
@@ -423,8 +427,6 @@ select.form-select {
 
   /* Explicit height for IE */
   .collapsible .fieldset-legend a { height:20px; }
-
-  .admin-panel h3 { background:#eee; }
 
   .collapsible .fieldset-legend span.icon {
     position:absolute;

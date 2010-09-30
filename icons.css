@@ -5,6 +5,7 @@
 .page-title span.icon,
 .admin-toolbar-menu span.icon,
 .menu span.icon,
+.admin-panel span.icon,
 .admin-list span.icon,
 .links span.icon {
   width:30px;
@@ -27,16 +28,20 @@
 .path-node-add-poll span.icon                   { background-position:-150px -240px; }
 
 /**
- * Sections
+ * Admin
  */
 .path-admin span.icon                           { background-position:0px 0px; }
-.path-admin-content span.icon                   { background-position:-30px 0px; }
-.path-admin-structure span.icon                 { background-position:-60px 0px; }
-.path-admin-reports span.icon                   { background-position:-120px 0px; }
-.path-admin-appearance span.icon                { background-position:-120px -30px; }
-.path-admin-config span.icon                    { background-position:-150px 0px; }
-.path-admin-people span.icon                    { background-position:-90px 0px; }
-.path-admin-modules span.icon                   { background-position:-210px -30px; }
+.path-admin- span.icon                          { background-position:-60px -150px; }
+
+/**
+ * Appearance
+ */
+.path-admin-appearance- span.icon               { background-position:-120px -30px; }
+
+/**
+ * Modules
+ */
+.path-admin-modules- span.icon                  { background-position:-210px -30px; }
 
 /**
  * Help
@@ -46,6 +51,7 @@
 /**
  * Content
  */
+.path-admin-content span.icon                   { background-position:-30px 0px; }
 .path-admin-content- span.icon                  { background-position:0px -30px; }
 .path-admin-content-forum span.icon             { background-position:-90px -120px; }
 .path-admin-content-book span.icon              { background-position:-90px -60px; }
@@ -54,6 +60,8 @@
 /**
  * Building
  */
+.path-admin-structure span.icon                 { background-position:-60px 0px; }
+.path-admin-structure- span.icon                { background-position:-30px -150px; }
 .path-admin-structure-menu span.icon            { background-position:-150px -30px; }
 .path-admin-structure-contact span.icon         { background-position:-60px -90px; }
 .path-admin-structure-block span.icon           { background-position:-180px -30px; }
@@ -64,13 +72,16 @@
 /**
  * User
  */
-.path-admin-people span.icon                    { background-position:-210px -90px; }
+.path-admin-people span.icon                    { background-position:-90px 0px; }
+.path-admin-people- span.icon                   { background-position:-210px -90px; }
 .path-admin-people-permissions span.icon        { background-position:-30px -90px; }
 .path-admin-people-permissions-roles span.icon  { background-position:-30px -120px; }
 
 /**
  * Reports
  */
+.path-admin-reports span.icon                   { background-position:-120px 0px; }
+.path-admin-reports- span.icon                  { background-position:0px -150px; }
 .path-admin-reports-dblog span.icon             { background-position:-210px -420px; }
 .path-admin-reports-hits span.icon              { background-position:-120px -420px; }
 .path-admin-reports-search span.icon            { background-position:0px -420px; }
@@ -86,6 +97,8 @@
 /**
  * Configuration
  */
+.path-admin-config span.icon                    { background-position:-150px 0px; }
+.path-admin-config- span.icon                   { background-position:-210px -120px; }
 .path-admin-config-people- span.icon            { background-position:0px -180px; }
 .path-admin-config-people-accounts span.icon    { background-position:-60px -120px; }
 .path-admin-config-people-ip-blocking span.icon { background-position:0px -120px; }
