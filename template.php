@@ -190,7 +190,7 @@ function rubik_preprocess_form_node(&$vars) {
     }
   }
   // Default to showing taxonomy in sidebar if nodeformcols is not present.
-  elseif (isset($vars['form']['taxonomy'])) {
+  elseif (isset($vars['form']['taxonomy']) && empty($vars['sidebar'])) {
     $vars['sidebar']['taxonomy'] = $vars['form']['taxonomy'];
     unset($vars['form']['taxonomy']);
   }
