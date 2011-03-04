@@ -104,7 +104,7 @@ function rubik_preprocess_page(&$vars) {
   }
 
   // Set a page icon class.
-  $vars['page_icon_class'] = ($item = menu_get_item()) ? _rubik_icon_classes($item['href']) : '';
+  $vars['page_icon_class'] = ($item = menu_get_item()) ? implode(' ' , _rubik_icon_classes($item['href'])) : '';
 
   // Help pages. They really do need help.
   if (strpos($_GET['q'], 'admin/help/') === 0 && isset($vars['page']['content']['system_main']['main']['#markup'])) {
@@ -374,7 +374,7 @@ function rubik_node_add_list($vars) {
     foreach ($content as $item) {
       $item['title'] = "<span class='icon'></span>" . filter_xss_admin($item['title']);
       if (isset($item['localized_options']['attributes']['class'])) {
-        $item['localized_options']['attributes']['class'] .= ' '. _rubik_icon_classes($item['href']);
+        $item['localized_options']['attributes']['class'] += _rubik_icon_classes($item['href']);
       }
       else {
         $item['localized_options']['attributes']['class'] = _rubik_icon_classes($item['href']);
@@ -398,11 +398,21 @@ function rubik_admin_block_content($vars) {
 
   $output = '';
   if (!empty($content)) {
+  
     foreach ($content as $k => $item) {
+    
+      //-- Safety check for invalid clients of the function
+      if (empty($content[$k]['localized_options']['attributes']['class'])) {
+        $content[$k]['localized_options']['attributes']['class'] = array();
+      }
+      if (!is_array($content[$k]['localized_options']['attributes']['class'])) {
+        $content[$k]['localized_options']['attributes']['class'] = array($content[$k]['localized_options']['attributes']['class']);
+      }
+    
       $content[$k]['title'] = "<span class='icon'></span>" . filter_xss_admin($item['title']);
       $content[$k]['localized_options']['html'] = TRUE;
       if (!empty($content[$k]['localized_options']['attributes']['class'])) {
-        $content[$k]['localized_options']['attributes']['class'] .= _rubik_icon_classes($item['href']);
+        $content[$k]['localized_options']['attributes']['class'] += _rubik_icon_classes($item['href']);
       }
       else {
         $content[$k]['localized_options']['attributes']['class'] = _rubik_icon_classes($item['href']);
@@ -432,7 +442,7 @@ function rubik_admin_drilldown_menu_item_link($link) {
     $link['localized_options']['attributes']['class'] = _rubik_icon_classes($link['href']);
   }
   else {
-    $link['localized_options']['attributes']['class'] .= ' '. _rubik_icon_classes($link['href']);
+    $link['localized_options']['attributes']['class'] += _rubik_icon_classes($link['href']);
   }
   $link['description'] = check_plain(truncate_utf8(strip_tags($link['description']), 150, TRUE, TRUE));
   $link['description'] = "<span class='icon'></span>" . $link['description'];
@@ -521,9 +531,9 @@ function _rubik_icon_classes($path) {
       $classes[] = 'path-'. str_replace('/', '-', implode('/', $args));
       array_pop($args);
     }
-    return implode(' ', $classes);
+    return $classes;
   }
-  return '';
+  return array();
 }
 
 function _rubik_local_tasks(&$vars) {
