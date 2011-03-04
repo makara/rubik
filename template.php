@@ -314,9 +314,13 @@ function rubik_preprocess_comment_wrapper(&$vars) {
  */
 function rubik_preprocess_admin_block(&$vars) {
   // Add icon and classes to admin block titles.
-  $vars['block']['localized_options']['attributes']['class'] = _rubik_icon_classes($vars['block']['href']);
+  if (isset($vars['block']['href'])) {
+    $vars['block']['localized_options']['attributes']['class'] =  _rubik_icon_classes($vars['block']['href']);
+  }
   $vars['block']['localized_options']['html'] = TRUE;
-  $vars['block']['title'] = l("<span class='icon'></span>" . filter_xss_admin($vars['block']['link_title']), $vars['block']['href'], $vars['block']['localized_options']);
+  if (isset($vars['block']['link_title'])) {
+    $vars['block']['title'] = l("<span class='icon'></span>" . filter_xss_admin($vars['block']['link_title']), $vars['block']['href'], $vars['block']['localized_options']);
+  }
 
   if (empty($vars['block']['content'])) {
     $vars['block']['content'] = "<div class='admin-block-description description'>{$vars['block']['description']}</div>";
@@ -408,7 +412,7 @@ function rubik_admin_block_content($vars) {
     foreach ($content as $item) {
       $output .= '<li class="leaf">';
       $output .= l($item['title'], $item['href'], $item['localized_options']);
-      if (!system_admin_compact_mode()) {
+      if (isset($item['description']) && !system_admin_compact_mode()) {
         $output .= "<div class='description'>{$item['description']}</div>";
       }
       $output .= '</li>';
