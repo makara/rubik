@@ -1,11 +1,6 @@
 /**
- * Views Ui
- */  
+ * Views UI
+ */
 #views-ui-edit-form ul.tabs {
 	position: static;
-}
-
-#views-ui-edit-form .pager {
-	height: auto;
-	margin-top: 0;
 }

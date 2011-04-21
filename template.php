@@ -398,9 +398,9 @@ function rubik_admin_block_content($vars) {
 
   $output = '';
   if (!empty($content)) {
-  
+
     foreach ($content as $k => $item) {
-    
+
       //-- Safety check for invalid clients of the function
       if (empty($content[$k]['localized_options']['attributes']['class'])) {
         $content[$k]['localized_options']['attributes']['class'] = array();
@@ -408,7 +408,7 @@ function rubik_admin_block_content($vars) {
       if (!is_array($content[$k]['localized_options']['attributes']['class'])) {
         $content[$k]['localized_options']['attributes']['class'] = array($content[$k]['localized_options']['attributes']['class']);
       }
-    
+
       $content[$k]['title'] = "<span class='icon'></span>" . filter_xss_admin($item['title']);
       $content[$k]['localized_options']['html'] = TRUE;
       if (!empty($content[$k]['localized_options']['attributes']['class'])) {
@@ -490,6 +490,24 @@ function rubik_menu_local_task($variables) {
 
   return '<li' . (!empty($variables['element']['#active']) ? ' class="active"' : '') . '>' . l($link_text, $link['href'], $link['localized_options']) . $children . "</li>\n";
 }
+
+/**
+ * Views.
+ */
+
+/**
+ * Preprocessor.
+ */
+function rubik_preprocess_views_ui_display_tab_bucket(&$variables) {
+  $element = $variables['element'];
+
+  // These classes are too general.
+  $variables['classes_array'] = array_diff($variables['classes_array'],  array(drupal_clean_css_identifier(strtolower($element['#name']))));
+}
+
+/**
+ * Helper functions.
+ */
 
 /**
  * Helper function for cloning and drupal_render()'ing elements.
