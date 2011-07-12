@@ -1,12 +1,4 @@
 <?php
-/*
- * Implements hook_preprocess_html().
- */
-function rubik_preprocess_html() {
-  if (module_exists('views')) {
-    drupal_add_css(drupal_get_path('module', 'views') . '/css/views-admin.seven.css', 'theme');
-  }
-}
 
 /**
  * Implements hook_css_alter().
