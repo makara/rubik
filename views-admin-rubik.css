@@ -26,6 +26,11 @@
    float: left;
 }
 
+#edit-options .collapsible {
+  float: none;
+  width: 100%;
+}
+
 .views-displays {
    clear: both;
 }
