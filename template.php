@@ -102,8 +102,10 @@ function rubik_preprocess_page(&$vars) {
     drupal_set_message(t('The Rubik theme requires the !tao base theme in order to work properly.', array('!tao' => l('Tao', 'http://code.developmentseed.org/tao'))), 'warning');
   }
 
+  $menu_item = menu_get_item();
+
   // Set a page icon class.
-  $vars['page_icon_class'] = ($item = menu_get_item()) ? implode(' ' , _rubik_icon_classes($item['href'])) : '';
+  $vars['page_icon_class'] = !empty($menu_item) ? implode(' ' , _rubik_icon_classes($menu_item['href'])) : '';
 
   // Help pages. They really do need help.
   if (strpos($_GET['q'], 'admin/help/') === 0 && isset($vars['page']['content']['system_main']['main']['#markup'])) {
@@ -113,6 +115,18 @@ function rubik_preprocess_page(&$vars) {
   // Clear out help text if empty.
   if (empty($vars['help']) || !(strip_tags($vars['help']))) {
     $vars['help'] = '';
+  }
+
+  // Use section title & subtitle when present.
+  // Section titles are provided by Context module -> Reactions -> Theme Page.
+  if (!empty($vars['section_title'])) {
+    $vars['title'] = $vars['section_title'];
+  }
+  if (!empty($vars['section_subtitle'])) {
+    $vars['subtitle'] = $vars['section_subtitle'];
+  }
+  else {
+    $vars['subtitle'] = !empty($menu_item['description']) ? check_plain(truncate_utf8($menu_item['description'], 50, TRUE, TRUE)) : '';
   }
 
   // Process local tasks. Only do this processing if the current theme is
