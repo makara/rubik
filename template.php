@@ -140,6 +140,9 @@ function rubik_preprocess_page(&$vars) {
     $vars['subtitle'] = !empty($menu_item['description']) ? check_plain(truncate_utf8($menu_item['description'], 50, TRUE, TRUE)) : '';
   }
 
+  // User menu.
+  $vars['user_menu'] = menu_navigation_links('user-menu');
+
   // Process local tasks. Only do this processing if the current theme is
   // indeed Rubik. Subthemes must reimplement this call.
   global $theme;
