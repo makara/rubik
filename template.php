@@ -19,6 +19,10 @@ function rubik_css_alter(&$css) {
   if (isset($css['modules/shortcut/shortcut.css'])) {
     $css['modules/shortcut/shortcut.css']['data'] = drupal_get_path('theme', 'rubik') . '/shortcut.css';
   }
+  // This can be removed once http://drupal.org/node/1221560 is released
+  if (isset($css['sites/all/modules/views/css/views-admin.rubik.css'])) {
+    $css['sites/all/modules/views/css/views-admin.rubik.css']['data'] = drupal_get_path('theme', 'rubik') . '/views-admin.rubik.css';
+  }
 }
 
 /**

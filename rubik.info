@@ -13,7 +13,6 @@ scripts[] = js/rubik.js
 stylesheets[screen][] = core.css
 stylesheets[screen][] = icons.css
 stylesheets[screen][] = style.css
-stylesheets[screen][] = views-admin-rubik.css
 
 ; Support shortcut module links
 settings[shortcut_module_link] = 1
