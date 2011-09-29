@@ -548,7 +548,7 @@ function _rubik_icon_classes($path) {
 }
 
 function _rubik_local_tasks(&$vars) {
-  if (!empty($vars['secondary_local_tasks'])) {
+  if (!empty($vars['secondary_local_tasks']) && is_array($vars['primary_local_tasks'])) {
     foreach ($vars['primary_local_tasks'] as $key => $element) {
       if (!empty($element['#active'])) {
         $vars['primary_local_tasks'][$key] = $vars['primary_local_tasks'][$key] + $vars['secondary_local_tasks'];
