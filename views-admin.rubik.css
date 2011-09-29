@@ -9,6 +9,10 @@
   text-decoration: underline;
 }
 
+#views-ui-add-form.views-admin fieldset fieldset.container-inline > .fieldset-wrapper {
+  padding: 10px 9px 9px;
+}
+
 #views-ui-edit-form div div.views-displays div.views-display-top ul.tabs.secondary.views-ui-render-add-view-button-processed-processed {
    position: relative;
 }
@@ -41,6 +45,10 @@
 
 .views-admin a:hover {
    text-decoration: none;
+}
+
+.views-attachment .options-set label {
+  font-weight: bold;
 }
 
 .views-display-setting .views-ajax-link {
@@ -108,6 +116,7 @@ select.form-select {
   border-top-color: #999;
   background: #fff;
   color: #333;
+  width: auto;
 }
 
 input.form-text:focus,
