@@ -383,3 +383,10 @@ div.node .column-side .column-wrapper {
   font-weight:normal;
   font-size:16px;
   }
+
+/**
+ * Views UI ===========================================================
+ */
+#views-ui-edit-form ul.tabs {
+  position: static;
+}
