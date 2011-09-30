@@ -151,3 +151,6 @@ select.form-select:focus {
 #edit-display-preview-controls .form-item {
   margin-bottom: 0;
 }
+#edit-options-exception.collapsible {
+    margin-top: 0;
+}
