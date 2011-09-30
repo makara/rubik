@@ -183,7 +183,12 @@ table tr.region td { background:#f8f8f8; }
 
 /* Hide tabledrag markers */
 table tr.draggable span.tabledrag-changed { display:none; }
-
+ 
+/* Stripe administrative tables */
+.page-admin table tr.even, .page-admin table tr.even td {
+  background: #f9f9f9;
+}
+               
 /**
  * Forms ==============================================================
  */
