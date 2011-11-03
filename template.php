@@ -523,7 +523,7 @@ function rubik_render_clone($elements) {
  * Helper function to submitted info theming functions.
  */
 function _rubik_submitted($node) {
-  $byline = t('Posted by !username', array('!username' => theme('username', array('name' => $node))));
+  $byline = t('Posted by !username', array('!username' => theme('username', array('account' => $node))));
   $date = format_date($node->created, 'small');
   return "<div class='byline'>{$byline}</div><div class='date'>$date</div>";
 }
