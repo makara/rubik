@@ -208,7 +208,7 @@ table tr.draggable span.tabledrag-changed { display:none; }
     padding:9px;
     }
 
-  .admin-list { margin:0px; }
+  .admin-list { margin:0px; list-style: none outside none;}
 
 table .form-item,
 table .item-list,
