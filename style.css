@@ -14,7 +14,9 @@ a {
   color:#59a;
   text-decoration:none;
   }
-
+a:hover {
+  text-decoration: none;
+}
 .limiter { margin:0px 30px; }
 
 /**
@@ -62,6 +64,7 @@ input.form-submit {
   box-shadow:#ddd 0px 1px 1px;
   -moz-box-shadow:#ddd 0px 1px 1px;
   -webkit-box-shadow:#ddd 0px 1px 1px;
+  margin-right: 12px;
   }
 
 /**
@@ -88,7 +91,7 @@ table th {
   background:url(images/bleeds.png) 0% -30px no-repeat;
   color:#fff;
   float:left;
-  padding:5px 10px;
+  padding:8px 10px;
   }
 
 #branding ul.links a:hover { background-position:0% -90px; }
@@ -121,7 +124,7 @@ table th {
     font-weight:normal;
     float:left;
     margin-right:-10px;
-    padding:5px 20px;
+    padding:8px 20px;
     background:url(images/bleeds.png) 100% -60px no-repeat;
     }
 
@@ -389,4 +392,38 @@ div.node .column-side .column-wrapper {
  */
 #views-ui-edit-form ul.tabs {
   position: static;
+}
+.ctools-dropbutton-processed .ctools-content li, .ctools-dropbutton-processed .ctools-content a {
+  margin: 0;
+}
+
+.views-displays .secondary .action-list li{
+  margin-left:0;
+}
+
+.views-ui-display-tab-actions .ctools-button-processed input,
+.views-displays .secondary .action-list li input.form-submit {
+  background: none;
+  -moz-border-radius:0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border: none 0;
+  text-shadow: none;
+  color: #333;
+  font-size: 12px;
+}
+
+#views-preview-wrapper {
+  border-top: 0 none;
+}
+
+#views-ui-preview-form .form-type-textfield {
+  margin-top: 2px;
+}
+/*context ui*/
+#ctools-export-ui-list-form .form-submit {
+  margin-top: 0.65em;
 }
