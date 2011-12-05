@@ -457,14 +457,13 @@ select.form-select {
     border-color:#ace;
     -webkit-box-shadow:#ace 0px 0px 5px;
     }
-
-  input.fluid {
-    -moz-box-sizing:border-box;
-    -webkit-box-sizing:border-box;
-    width:100%;
-    }
-
-    table input.fluid { width:auto; }
+.form-item .description {
+  margin-left: 130px;
+  font-size: 0.8em;
+  font-style: italic;
+  color: #666;
+}
+  table input.fluid { width:auto; }
 
   html.js input.form-autocomplete { background-position:100% 7px; }
   html.js input.throbbing { background-position:100% -13px; }
