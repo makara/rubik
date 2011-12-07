@@ -74,7 +74,6 @@ div.status {
   float:none;
   display:block;
   padding:5px 10px 4px;
-  border-bottom:1px solid #f4f4f4;
   }
 
   .admin-block-description,
@@ -239,19 +238,12 @@ table .item-list,
   .form.item .form-type-checkbox,
   .form-checkboxes .form-type-checkbox { margin-bottom:0px; }
 
-.form-item label {
-  margin:0px;
-  padding:0px;
-  color:#999;
-  font-weight:bold;
-  font-size:10px;
-  text-transform:uppercase;
-  }
+
 
   .form-item label.option {
     text-transform:none;
     font-size:11px;
-    }
+    }s
 
   .form-item label.option input { vertical-align:middle; }
 
@@ -462,6 +454,7 @@ select.form-select {
   font-size: 0.8em;
   font-style: italic;
   color: #666;
+  margin-top: 5px;
 }
   table input.fluid { width:auto; }
 
@@ -622,8 +615,6 @@ select.form-select {
 .column-footer { clear:both; }
 
 form .form-actions {
-  background:#eee;
-  border:1px solid #ddd;
   padding:9px;
   }
 
